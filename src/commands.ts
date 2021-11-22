@@ -35,7 +35,7 @@ bot.command('price', async (ctx) => {
 
 bot.command('listtokens', (ctx) => {
   ctx.replyWithMarkdown(
-    '*Os tokens disponível são:*\n' +
+    '*Os tokens disponível são:*\n\n' +
       Object.keys(TOKENS)
         .map((token) => `- ${token}`)
         .join('\n')
