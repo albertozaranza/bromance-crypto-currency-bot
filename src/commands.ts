@@ -16,7 +16,7 @@ type Token = {
   };
 };
 
-bot.command('price', async (ctx) => {
+bot.command('price', async ctx => {
   const tokenName = ctx.message.text.split(' ')[1].toUpperCase();
 
   const url = process.env.API_PANCAKESWAP || '';
@@ -27,8 +27,9 @@ bot.command('price', async (ctx) => {
     const response = await axios.get<Token>(`${url}/tokens/${token}`);
 
     ctx.replyWithMarkdown(
-      `O preço do *${tokenName}* é: $` +
-        parseFloat(response.data.data.price).toFixed(2)
+      `O preço do *${tokenName}* é: $${parseFloat(
+        response.data.data.price,
+      ).toFixed(2)}`,
     );
   } catch (error) {
     return ctx.reply('Aconteceu um erro ao obter os dados da API');

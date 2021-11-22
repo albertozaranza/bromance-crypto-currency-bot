@@ -1,8 +1,8 @@
 import { bot } from './commands';
 
-bot.help((ctx) => {
+bot.help(ctx => {
   ctx.reply(
-    `Digite /price {token} para saber o preço do token\nDigite /listtokens para listar todos os token`
+    `Digite /price {token} para saber o preço do token\nDigite /listtokens para listar todos os token`,
   );
 });
 

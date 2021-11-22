@@ -13,7 +13,7 @@ export default async function getTokens(tokenName: string): Promise<string> {
         headers: {
           'X-CMC_PRO_API_KEY': process.env.API_COINMARKETCAP_KEY || '',
         },
-      }
+      },
     );
     cacheToken[tokenName] = token.data.data[tokenName].platform.token_address;
     return cacheToken[tokenName];
