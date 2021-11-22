@@ -18,7 +18,7 @@ type Token = {
 };
 
 bot.command('price', async (ctx) => {
-  const token = TOKENS[ctx.message.text as keyof typeof TOKENS];
+  const token = TOKENS[ctx.message.text.toLowerCase() as keyof typeof TOKENS];
 
   if (!token) {
     return ctx.reply('O token o não existe');
