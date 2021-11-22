@@ -8,7 +8,7 @@ In the Land of BSC where the Shadows lie <br />
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Funcionar
+- [x] Funcionar
 - [ ] Ficar mais bonito
 - [ ] Gerar dinheiro
 
