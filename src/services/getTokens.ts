@@ -8,7 +8,12 @@ export default async function getTokens(tokenName: string): Promise<any> {
   }
   try {
     const token = await axios.get(
-      `${process.env.API_COINMARKETCAP}/cryptocurrency/quotes/latest?symbol=${tokenName}`
+      `${process.env.API_COINMARKETCAP}/cryptocurrency/quotes/latest?symbol=${tokenName}`,
+      {
+        headers: {
+          'X-CMC_PRO_API_KEY': process.env.API_COINMARKETCAP_KEY || '',
+        },
+      }
     );
     cacheToken[tokenName] = token.data.data[tokenName].platform.token_address;
     return cacheToken[tokenName];
