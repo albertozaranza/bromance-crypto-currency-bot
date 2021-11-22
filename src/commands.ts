@@ -25,8 +25,6 @@ bot.command('price', async ctx => {
   }
 
   try {
-    tokenName.toUpperCase();
-
     const url = process.env.API_PANCAKESWAP || '';
     const token = await getTokens(tokenName);
 
