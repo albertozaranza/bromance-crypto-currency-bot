@@ -23,6 +23,7 @@ bot.command('price', async (ctx) => {
   if (!token) {
     return ctx.reply('O token o não existe');
   }
+
   const response = await axios.get<Token>(process.env.API_PANCAKESWAP + token);
 
   ctx.reply(
@@ -30,6 +31,6 @@ bot.command('price', async (ctx) => {
   );
 });
 
-bot.command('list-tokens', async (ctx) => {
+bot.command('list-tokens', (ctx) => {
   ctx.reply('**Os tokens disponível são:**\n' + Object.keys(TOKENS).join('\n'));
 });
