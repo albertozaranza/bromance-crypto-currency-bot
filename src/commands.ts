@@ -18,22 +18,26 @@ type Token = {
 };
 
 bot.command('price', async (ctx) => {
-  const token =
-    TOKENS[ctx.message.text.split(' ')[1].toLowerCase() as keyof typeof TOKENS];
+  const tokenName = ctx.message.text.split(' ')[1].toLowerCase();
+  const token = TOKENS[tokenName as keyof typeof TOKENS];
 
   if (!token) {
-    return ctx.reply('O token o não existe');
+    return ctx.reply('O token não existe');
   }
 
   const response = await axios.get<Token>(process.env.API_PANCAKESWAP + token);
 
-  ctx.reply(
-    `O preço do ${token} é: ` + parseFloat(response.data.data.price).toFixed(2)
+  ctx.replyWithMarkdown(
+    `O preço do *${tokenName}* é: ` +
+      parseFloat(response.data.data.price).toFixed(2)
   );
 });
 
 bot.command('listtokens', (ctx) => {
   ctx.replyWithMarkdown(
-    '**Os tokens disponível são:**\n' + `- ${Object.keys(TOKENS).join('\n')}`
+    '*Os tokens disponível são:*\n' +
+      Object.keys(TOKENS)
+        .map((token) => `- ${token}`)
+        .join('\n')
   );
 });
