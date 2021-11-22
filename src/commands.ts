@@ -18,13 +18,19 @@ type Token = {
 };
 
 bot.command('price', async ctx => {
+<<<<<<< HEAD
   const tokenName = ctx.message.text.split(' ')[1]?.toUpperCase() || null;
+=======
+  const tokenName = ctx.message.text.split(' ')[1] || null;
+>>>>>>> 399ff63 (added .toUpperCase() inside trycatch)
 
   if (!tokenName) {
     return ctx.reply('Por favor, especifique o nome do token');
   }
 
   try {
+    tokenName.toUpperCase();
+
     const url = process.env.API_PANCAKESWAP || '';
     const token = await getTokens(tokenName);
 
