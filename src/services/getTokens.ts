@@ -18,6 +18,6 @@ export default async function getTokens(tokenName: string): Promise<string> {
     cacheToken[tokenName] = token.data.data[tokenName].platform.token_address;
     return cacheToken[tokenName];
   } catch (error) {
-    throw 'Aconteceu um erro ao obter os dados da API';
+    throw 'Aconteceu um erro ao obter os dados da API (coinmarketcap)';
   }
 }
