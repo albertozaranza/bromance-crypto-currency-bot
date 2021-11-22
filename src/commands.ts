@@ -31,6 +31,6 @@ bot.command('price', async (ctx) => {
   );
 });
 
-bot.command('list-tokens', (ctx) => {
+bot.command('listtokens', (ctx) => {
   ctx.reply('**Os tokens disponível são:**\n' + Object.keys(TOKENS).join('\n'));
 });
