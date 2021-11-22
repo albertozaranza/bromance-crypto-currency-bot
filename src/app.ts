@@ -1,11 +1,4 @@
-import { Context, Telegraf } from 'telegraf';
-import { Update } from 'typegram';
-
-import './commands';
-
-const token: string = process.env.BOT_TOKEN as string;
-
-const bot: Telegraf<Context<Update>> = new Telegraf(token);
+import { bot } from './commands';
 
 bot.help((ctx) => {
   ctx.reply('Digite /price {token} para saber o preço do token');

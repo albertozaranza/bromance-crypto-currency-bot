@@ -6,7 +6,7 @@ import { TOKENS } from './tokens';
 
 const token: string = process.env.BOT_TOKEN as string;
 
-const bot: Telegraf<Context<Update>> = new Telegraf(token);
+export const bot: Telegraf<Context<Update>> = new Telegraf(token);
 
 type Token = {
   data: {
