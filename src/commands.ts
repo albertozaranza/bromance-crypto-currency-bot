@@ -18,9 +18,8 @@ type Token = {
 };
 
 bot.command('price', async (ctx) => {
-  const token = TOKENS[ctx.message.text.toLowerCase() as keyof typeof TOKENS];
-
-  ctx.reply(ctx.message.text);
+  const token =
+    TOKENS[ctx.message.text.split(' ')[1].toLowerCase() as keyof typeof TOKENS];
 
   if (!token) {
     return ctx.reply('O token o não existe');
@@ -34,5 +33,7 @@ bot.command('price', async (ctx) => {
 });
 
 bot.command('listtokens', (ctx) => {
-  ctx.reply('**Os tokens disponível são:**\n' + Object.keys(TOKENS).join('\n'));
+  ctx.replyWithMarkdown(
+    '**Os tokens disponível são:**\n' + `- ${Object.keys(TOKENS).join('\n')}`
+  );
 });
