@@ -11,7 +11,7 @@ export default async function getTokens(tokenName: string): Promise<any> {
       `${process.env.API_COINMARKETCAP}/cryptocurrency/quotes/latest?symbol=${tokenName}`
     );
     cacheToken[tokenName] = token.data.data[tokenName].platform.token_address;
-    return token.data.data;
+    return cacheToken[tokenName];
   } catch (error) {
     throw 'Aconteceu um erro ao obter os dados da API';
   }
