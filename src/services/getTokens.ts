@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const cacheToken: any = {};
 
-export default async function getTokens(tokenName: string): Promise<any> {
+export default async function getTokens(tokenName: string): Promise<string> {
   if (cacheToken[tokenName]) {
     return cacheToken[tokenName];
   }
