@@ -28,7 +28,7 @@ bot.command('price', async (ctx) => {
   const response = await axios.get<Token>(process.env.API_PANCAKESWAP + token);
 
   ctx.replyWithMarkdown(
-    `O preço do *${tokenName}* é: ` +
+    `O preço do *${tokenName}* é: $` +
       parseFloat(response.data.data.price).toFixed(2)
   );
 });
