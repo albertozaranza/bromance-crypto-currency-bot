@@ -1,41 +1,55 @@
-# Telegram Bot
+# Bromance Crypto Currency
 
-Telegram Bot with TypeScript, Node.js, and Telegraf and deployment configuration for Heroku.
+> One Bot to price them all, One Bot to find them, <br />
+One Bot to bring them all, and in the darkness bind them, <br />
+In the Land of BSC where the Shadows lie <br />
 
-## Medium article
+### Ajustes e melhorias
 
-[Build a Telegram Bot using TypeScript, Node.js, and Telegraf and deploy it on Heroku](https://pirasalbe.medium.com/build-a-telegram-bot-using-typescript-node-js-and-telegraf-and-deploy-it-on-heroku-fcc28c15614f)
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-## Build the project with TypeScript
+- [ ] Funcionar
+- [ ] Ficar mais bonito
+- [ ] Gerar dinheiro
 
-```
-npm run build
-```
 
-## Run the project
+## 🤝 Colaboradores
 
-Start script
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-```
-npm start
-```
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars3.githubusercontent.com/u/28146931" width="100px;" alt="Foto do Gerlison no GitHub"/><br>
+        <sub>
+          <b>Gerlison</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars3.githubusercontent.com/u/24248893" width="100px;" alt="Foto do Alberto no GitHub"/><br>
+        <sub>
+          <b>Alberto Zaranza</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-&nbsp;
+## ☕ Nos compre um café
 
-Define _token_ and run the project
+Carteira BEP20:
+- Gerlison - 0x4f7A261a220F2A6A7E56dFAe4eDa6554ab536ACf
+- Alberto - 0x883B7eC728559aCD0123CC32901F6A766276066F
 
-```
-BOT_TOKEN="110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw" npm start
-```
+## 😄 Seja um dos contribuidores<br>
 
-_Replace the token in the command, which is **invalid**, with your own._
+Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
 
-&nbsp;
+## 📝 Licença
 
-Define _token_ and _chat id_ and run the project
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-```
-BOT_TOKEN="110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw" CHAT_ID="123456789" npm start
-```
-
-_Replace the chat id in the command, which is **invalid**, with your own._
+[⬆ Voltar ao topo](#nome-do-projeto)<br>
