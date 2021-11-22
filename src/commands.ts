@@ -18,13 +18,15 @@ type Token = {
 };
 
 bot.command('price', async ctx => {
-  const tokenName = ctx.message.text.split(' ')[1].toUpperCase() || null;
+  const tokenName = ctx.message.text.split(' ')[1] || null;
 
   if (!tokenName) {
     return ctx.reply('Por favor, especifique o nome do token');
   }
 
   try {
+    tokenName.toUpperCase();
+
     const url = process.env.API_PANCAKESWAP || '';
     const token = await getTokens(tokenName);
 
@@ -35,6 +37,8 @@ bot.command('price', async ctx => {
         parseFloat(response.data.data.price).toFixed(2),
     );
   } catch (error) {
-    return ctx.reply('Aconteceu um erro ao obter os dados da API (pancakeswap)');
+    return ctx.reply(
+      'Aconteceu um erro ao obter os dados da API (pancakeswap)',
+    );
   }
 });
